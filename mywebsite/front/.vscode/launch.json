@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/mywebsite-front",
+            "runtimeExecutable": "deno",
+            "runtimeArgs": [
+                "run",
+                "--unstable",
+                "--allow-net",
+                "--importmap=import_map.json",
+                "--inspect",
+                "-A",
+                "main.ts"
+            ],
+            "port": 9229,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Attach",
+            "type": "node",
+            "request": "attach",
+            "port": 9229
+        }
+    ]
+}
