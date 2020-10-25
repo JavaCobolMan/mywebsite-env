@@ -1,0 +1,11 @@
+version: "3"
+services:
+  front-app:
+    container_name: front-app-Deno
+    build: .
+    tty: true
+    ports:
+      - 3000:3000
+    volumes:
+      - ./.devcontainer:/app/.devcontainer
+      - ./.vscode:/app/.vscode

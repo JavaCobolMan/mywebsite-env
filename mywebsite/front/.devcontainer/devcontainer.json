@@ -1,0 +1,14 @@
+{
+    "name": "front",
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+    "appPort": [
+        3000
+    ],
+    "service": "front-app",
+    "extensions": [
+        "denoland.vscode-deno"
+    ],
+    "workspaceFolder": "/app",
+}
