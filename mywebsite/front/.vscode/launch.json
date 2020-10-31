@@ -8,7 +8,7 @@
             "name": "Launch",
             "type": "node",
             "request": "launch",
-            "cwd": "${workspaceFolder}/mywebsite-front",
+            "cwd": "${workspaceFolder}/mywebsite-src-front",
             "runtimeExecutable": "deno",
             "runtimeArgs": [
                 "run",
