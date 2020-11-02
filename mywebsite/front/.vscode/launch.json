@@ -6,27 +6,35 @@
     "configurations": [
         {
             "name": "Launch",
-            "type": "node",
+            "type": "pwa-node",
             "request": "launch",
             "cwd": "${workspaceFolder}/mywebsite-src-front",
             "runtimeExecutable": "deno",
             "runtimeArgs": [
                 "run",
                 "--unstable",
-                "--allow-net",
                 "--importmap=import_map.json",
-                "--inspect",
+                "--inspect-brk",
                 "-A",
                 "main.ts"
             ],
-            "port": 9229,
-            "console": "integratedTerminal"
+            "attachSimplePort": 9229
         },
         {
-            "name": "Attach",
-            "type": "node",
-            "request": "attach",
-            "port": 9229
+            "name": "Test",
+            "type": "pwa-node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/mywebsite-src-front",
+            "runtimeExecutable": "deno",
+            "runtimeArgs": [
+                "test",
+                "--unstable",
+                "--importmap=import_map.json",
+                "--inspect-brk",
+                "-A",
+                "${file}"
+            ],
+            "attachSimplePort": 9229
         }
     ]
 }
